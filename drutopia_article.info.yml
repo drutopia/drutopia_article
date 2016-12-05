@@ -12,6 +12,7 @@ dependencies:
   - node
   - path
   - rdf
+  - taxonomy
   - text
   - user
 package: Drutopia
