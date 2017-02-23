@@ -7,9 +7,13 @@ dependencies:
   - drutopia_comment
   - drutopia_core
   - drutopia_site
+  - ds
+  - entity_reference_revisions
   - field
   - image
   - node
+  - paragraphs
+  - paragraphs_base_terms
   - path
   - pathauto
   - rdf

@@ -2,7 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.rss
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
@@ -10,12 +11,13 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
-    - image.style.small_square
+    - image.style.large
     - node.type.article
   module:
+    - comment
     - ds
+    - entity_reference_revisions
     - image
-    - text
     - user
 third_party_settings:
   ds:
@@ -36,46 +38,66 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - field_image
         - node_title
-        - field_summary
+        - field_image
+        - field_body_paragraph
+        - field_article_type
+        - field_tags
+        - comment
         - links
     fields:
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 0
         label: hidden
         formatter: default
-        settings:
-          link: true
-          wrapper: h2
-          class: ''
-id: node.article.rss
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: rss
+mode: full
 content:
+  comment:
+    label: above
+    type: comment_default
+    weight: 4
+    settings:
+      pager_id: 0
+      view_mode: default
+    third_party_settings: {  }
+  field_article_type:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_body_paragraph:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
   field_image:
     type: image
     weight: 0
-    label: hidden
     settings:
-      image_style: small_square
+      image_style: large
       image_link: ''
     third_party_settings: {  }
-  field_summary:
-    type: text_default
-    weight: 2
     label: hidden
-    settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 3
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
   links:
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
-  comment: true
-  field_article_type: true
-  field_body_paragraph: true
-  field_tags: true
+  field_summary: true
