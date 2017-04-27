@@ -37,12 +37,16 @@ third_party_settings:
     regions:
       ds_content:
         - field_image
+        - node_post_date
         - node_title
         - field_summary
-        - field_article_type
         - field_tags
-        - links
     fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: ds_post_date_month_day_year
       node_title:
         plugin_id: node_title
         weight: 0
@@ -57,13 +61,6 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  field_article_type:
-    type: entity_reference_label
-    weight: 2
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
   field_image:
     type: image
     weight: 0
@@ -85,11 +82,9 @@ content:
       link: true
     third_party_settings: {  }
     label: hidden
-  links:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   comment: true
+  field_article_type: true
   field_body_paragraph: true
+  links: true
