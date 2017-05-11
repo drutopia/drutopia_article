@@ -13,7 +13,6 @@ dependencies:
   - image
   - node
   - paragraphs
-  - paragraphs_base_terms
   - path
   - pathauto
   - rdf

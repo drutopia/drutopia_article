@@ -6,9 +6,9 @@
   "homepage": "https://gitlab.com/drutopia/drutopia_article",
   "minimum-stability": "dev",
   "require": {
-    "drupal/ctools": "^3.0-alpha27",
-    "drupal/pathauto": "^1.0-beta1",
-    "drupal/token": "^1.0-beta2",
-    "drupal/admin_toolbar": "^1.18"
+    "drupal/ctools": "^3.0",
+    "drupal/ds": "^3.0-rc1",
+    "drupal/pathauto": "^1.0",
+    "drupal/token": "^1.0"
   }
 }
