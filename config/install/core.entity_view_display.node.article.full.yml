@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
+    - field.field.node.article.field_authors
     - field.field.node.article.field_body_paragraph
     - field.field.node.article.field_image
     - field.field.node.article.field_summary
@@ -23,8 +24,7 @@ third_party_settings:
   ds:
     layout:
       id: ds_1col
-      path: modules/contrib/ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -39,6 +39,7 @@ third_party_settings:
     regions:
       ds_content:
         - node_post_date
+        - field_authors
         - field_image
         - field_body_paragraph
         - field_article_type
@@ -59,22 +60,30 @@ content:
   comment:
     label: above
     type: comment_default
-    weight: 5
+    weight: 6
     settings:
       pager_id: 0
       view_mode: default
     third_party_settings: {  }
     region: ds_content
   field_article_type:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: ds_content
+  field_authors:
+    type: entity_reference_label
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   field_body_paragraph:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -84,7 +93,7 @@ content:
     region: ds_content
   field_image:
     type: image
-    weight: 1
+    weight: 2
     settings:
       image_style: large
       image_link: ''
@@ -93,17 +102,17 @@ content:
     region: ds_content
   field_tags:
     type: entity_reference_label
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     region: ds_content
   links:
-    weight: 6
+    weight: 7
+    region: ds_content
     settings: {  }
     third_party_settings: {  }
-    region: ds_content
 hidden:
   body: true
   field_summary: true
