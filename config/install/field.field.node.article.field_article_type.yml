@@ -10,7 +10,7 @@ field_name: field_article_type
 entity_type: node
 bundle: article
 label: 'Article type'
-description: ''
+description: ' Site visitors can filter content by the Article Type. Add Article Type options at the  <a href="/admin/structure/taxonomy/manage/article_type/overview">Article Type vocabulary page</a>. '
 required: false
 translatable: false
 default_value: {  }
