@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.article
-    - system.menu.main
   module:
     - node
     - user
@@ -392,7 +391,7 @@ display:
       display_extenders: {  }
       path: article
       menu:
-        type: normal
+        type: none
         title: Articles
         description: 'Read our articles.'
         expanded: false
