@@ -13,12 +13,14 @@ dependencies:
   - ds
   - entity_reference_revisions
   - field
+  - field_group
   - image
   - node
   - paragraphs
   - path
   - pathauto
   - rdf
+  - responsive_image
   - taxonomy
   - text
   - user
