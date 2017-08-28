@@ -6,28 +6,28 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
+    - field.field.node.article.field_authors
     - field.field.node.article.field_body_paragraph
     - field.field.node.article.field_image
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
-    - image.style.small_square
     - node.type.article
   module:
     - ds
-    - image
+    - responsive_image
     - text
     - user
 third_party_settings:
   ds:
     layout:
-      id: ds_1col
-      path: modules/contrib/ds
-      library: ''
+      id: ds_2col
+      library: ds/ds_2col
       disable_css: false
       entity_classes: all_classes
       settings:
         wrappers:
-          ds_content: div
+          left: div
+          right: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -35,8 +35,9 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      ds_content:
+      left:
         - field_image
+      right:
         - node_post_date
         - node_title
         - field_summary
@@ -44,12 +45,12 @@ third_party_settings:
     fields:
       node_post_date:
         plugin_id: node_post_date
-        weight: 0
+        weight: 1
         label: hidden
         formatter: ds_post_date_month_day_year
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 2
         label: hidden
         formatter: default
         settings:
@@ -62,32 +63,33 @@ bundle: article
 mode: teaser
 content:
   field_image:
-    type: image
+    type: responsive_image
     weight: 0
     settings:
-      image_style: small_square
       image_link: content
+      responsive_image_style: ''
     third_party_settings: {  }
-    label: hidden
-    region: ds_content
+    label: visually_hidden
+    region: left
   field_summary:
     type: text_default
-    weight: 1
-    label: hidden
+    weight: 3
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    region: ds_content
+    region: right
   field_tags:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     settings:
       link: true
     third_party_settings: {  }
     label: hidden
-    region: ds_content
+    region: right
 hidden:
   body: true
   comment: true
   field_article_type: true
+  field_authors: true
   field_body_paragraph: true
   links: true
