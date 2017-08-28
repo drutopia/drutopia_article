@@ -11,12 +11,12 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
+    - image.style.small_square
     - node.type.article
-    - responsive_image.styles.narrow
   module:
     - ds
     - field_group
-    - responsive_image
+    - image
     - text
     - user
 third_party_settings:
@@ -76,12 +76,12 @@ bundle: article
 mode: media
 content:
   field_image:
-    type: responsive_image
+    type: image
     weight: 0
     region: ds_content
     label: visually_hidden
     settings:
-      responsive_image_style: narrow
+      image_style: small_square
       image_link: content
     third_party_settings: {  }
   field_summary:
