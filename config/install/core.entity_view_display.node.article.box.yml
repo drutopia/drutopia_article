@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.box
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
@@ -14,20 +14,17 @@ dependencies:
     - node.type.article
   module:
     - ds
-    - responsive_image
-    - text
     - user
 third_party_settings:
   ds:
     layout:
-      id: ds_2col
-      library: ds/ds_2col
-      disable_css: true
+      id: ds_1col
+      library: null
+      disable_css: false
       entity_classes: all_classes
       settings:
         wrappers:
-          left: div
-          right: div
+          ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -35,14 +32,9 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      left:
-        - field_image
-      right:
-        - node_post_date
+      ds_content:
         - node_title
-        - field_authors
-        - field_summary
-        - field_tags
+        - node_post_date
     fields:
       node_post_date:
         plugin_id: node_post_date
@@ -51,53 +43,25 @@ third_party_settings:
         formatter: ds_post_date_month_day_year
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 0
         label: hidden
         formatter: default
         settings:
           link: true
           wrapper: h2
           class: ''
-id: node.article.teaser
+id: node.article.box
 targetEntityType: node
 bundle: article
-mode: teaser
-content:
-  field_authors:
-    type: entity_reference_label
-    weight: 3
-    region: right
-    label: visually_hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_image:
-    type: responsive_image
-    weight: 0
-    settings:
-      image_link: content
-      responsive_image_style: ''
-    third_party_settings: {  }
-    label: visually_hidden
-    region: left
-  field_summary:
-    type: text_default
-    weight: 4
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
-    region: right
-  field_tags:
-    type: entity_reference_label
-    weight: 5
-    settings:
-      link: true
-    third_party_settings: {  }
-    label: hidden
-    region: right
+mode: box
+content: {  }
 hidden:
   body: true
   comment: true
   field_article_type: true
+  field_authors: true
   field_body_paragraph: true
+  field_image: true
+  field_summary: true
+  field_tags: true
   links: true

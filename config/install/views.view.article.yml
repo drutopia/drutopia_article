@@ -2,9 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.box
     - core.entity_view_mode.node.teaser
     - node.type.article
   module:
+    - ds
     - node
     - user
 id: article
@@ -50,7 +52,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 10
+          items_per_page: 16
           offset: 0
           id: 0
           total_pages: null
@@ -390,6 +392,45 @@ display:
     display_options:
       display_extenders: {  }
       path: article
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      defaults:
+        style: false
+        row: false
+      row:
+        type: 'ds_entity:node'
+        options:
+          relationship: none
+          view_mode: box
+          alternating_fieldset:
+            alternating: true
+            allpages: false
+            item_0: teaser
+            item_1: card
+            item_2: card
+            item_3: card
+            item_4: media
+            item_5: media
+            item_6: media
+            item_7: media
+            item_8: box
+            item_9: box
+            item_10: box
+            item_11: box
+            item_12: box
+            item_13: box
+            item_14: box
+            item_15: box
+          grouping_fieldset:
+            group: false
+            group_field: node_field_data|created
+            group_field_function: ''
+          advanced_fieldset:
+            advanced: false
     cache_metadata:
       max-age: -1
       contexts:
