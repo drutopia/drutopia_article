@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.box
+    - core.entity_view_mode.node.card
     - core.entity_view_mode.node.teaser
     - node.type.article
   module:
@@ -195,6 +196,8 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        style: false
+        row: false
       filters:
         status:
           value: '1'
@@ -261,7 +264,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 3
+          items_per_page: 4
           offset: 0
       display_description: ''
       block_description: 'Promoted articles'
@@ -270,6 +273,17 @@ display:
       use_more: false
       use_more_always: false
       use_more_text: More
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
     cache_metadata:
       max-age: -1
       contexts:
@@ -391,12 +405,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: article
+      path: articles
       style:
         type: default
         options:
           row_class: ''
-          default_row_class: true
+          default_row_class: false
           uses_fields: false
       defaults:
         style: false
