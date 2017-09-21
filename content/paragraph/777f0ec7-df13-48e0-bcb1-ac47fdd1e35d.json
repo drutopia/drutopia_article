@@ -20,17 +20,17 @@
     },
     "id": [
         {
-            "value": 58
+            "value": 74
         }
     ],
     "uuid": [
         {
-            "value": "38a0eec8-83ca-4c5e-a2d0-b241ebb0bd46"
+            "value": "777f0ec7-df13-48e0-bcb1-ac47fdd1e35d"
         }
     ],
     "revision_id": [
         {
-            "value": 380
+            "value": 357
         }
     ],
     "type": [
@@ -89,13 +89,13 @@
     ],
     "created": [
         {
-            "value": 1500662244,
+            "value": 1504634499,
             "lang": "en"
         }
     ],
     "parent_id": [
         {
-            "value": "9"
+            "value": "24"
         }
     ],
     "parent_type": [
@@ -128,7 +128,7 @@
     ],
     "field_text": [
         {
-            "value": "<p>Articles are often a key element of your site. They will be used for items such as news, updates or announcement and can also be used for things such as press releases.<\/p>\r\n\r\n<p>An article vocabulary lets you categorize your articles according to the type of article they are. This allows for articles of a particular type to be grouped together.<\/p>\r\n\r\n<p>At a minimum every article should have an image (which will be associated with the article and display in different sizes in different displays), a summary field and a text paragraph in the body field.<\/p>\r\n\r\n<p>All Drutopia content types are built using the Paragraphs module which lets you add a variety of types of content and arrange them in the order you wish. When creating an article you can add standard text paragraphs in the body paragraph field, but also add images or files (such as a PDF).<\/p>\r\n",
+            "value": "<p>Ut bibendum fermentum justo at dictum. Donec varius nisl tempus iaculis porta. Aliquam auctor faucibus lectus a auctor. Curabitur vitae orci condimentum, auctor nibh sit amet, posuere purus. Nunc mattis eros augue, nec ullamcorper augue rutrum non. Aliquam erat volutpat. Donec pulvinar fringilla quam, sit amet ornare risus auctor sit amet. Proin sit amet sodales tortor. Mauris convallis, eros ut posuere vestibulum, turpis felis venenatis mauris, at venenatis sem odio ac est.<\/p>\r\n\r\n<p>Ut bibendum fermentum justo at dictum. Donec varius nisl tempus iaculis porta. Aliquam auctor faucibus lectus a auctor. Curabitur vitae orci condimentum, auctor nibh sit amet, posuere purus. Nunc mattis eros augue, nec ullamcorper augue rutrum non. Aliquam erat volutpat. Donec pulvinar fringilla quam, sit amet ornare risus auctor sit amet. Proin sit amet sodales tortor. Mauris convallis, eros ut posuere vestibulum, turpis felis venenatis mauris, at venenatis sem odio ac est.<\/p>\r\n\r\n<p>Ut bibendum fermentum justo at dictum. Donec varius nisl tempus iaculis porta. Aliquam auctor faucibus lectus a auctor. Curabitur vitae orci condimentum, auctor nibh sit amet, posuere purus. Nunc mattis eros augue, nec ullamcorper augue rutrum non. Aliquam erat volutpat. Donec pulvinar fringilla quam, sit amet ornare risus auctor sit amet. Proin sit amet sodales tortor. Mauris convallis, eros ut posuere vestibulum, turpis felis venenatis mauris, at venenatis sem odio ac est.<\/p>\r\n",
             "format": "basic_html"
         }
     ]
