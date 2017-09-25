@@ -12,5 +12,6 @@
     "drupal/field_group": "^3.0-dev",
     "drupal/pathauto": "^1.0",
     "drupal/token": "^1.0"
+    "drupal/drutopia_seo": "1.x-dev"
   }
 }
