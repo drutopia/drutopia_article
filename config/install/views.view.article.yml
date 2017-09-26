@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.card
     - core.entity_view_mode.node.teaser
     - node.type.article
+    - system.menu.main
   module:
     - ds
     - node
@@ -446,6 +447,15 @@ display:
             group_field_function: ''
           advanced_fieldset:
             advanced: false
+      menu:
+        type: normal
+        title: Articles
+        description: 'Keep up to date.'
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
