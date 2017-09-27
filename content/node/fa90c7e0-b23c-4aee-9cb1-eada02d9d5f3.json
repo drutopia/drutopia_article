@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/articles\/sample-article?_format=hal_json"
+            "href": "http:\/\/default\/articles\/maecenas-rutrum-facilisis?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
@@ -30,7 +30,7 @@
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
             {
-                "href": "http:\/\/default\/sites\/default\/files\/2017-09\/bowl_strawberries.JPG",
+                "href": "http:\/\/default\/sites\/default\/files\/2017-09\/marigolds.jpg",
                 "lang": "en"
             }
         ],
@@ -38,12 +38,16 @@
             {
                 "href": "http:\/\/default\/taxonomy\/term\/4?_format=hal_json",
                 "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/17?_format=hal_json",
+                "lang": "en"
             }
         ]
     },
     "uuid": [
         {
-            "value": "8572ecd1-0f0c-48e5-8151-83451f6baf61"
+            "value": "fa90c7e0-b23c-4aee-9cb1-eada02d9d5f3"
         }
     ],
     "langcode": [
@@ -65,7 +69,7 @@
     ],
     "title": [
         {
-            "value": "Sample article",
+            "value": "Maecenas rutrum facilisis",
             "lang": "en"
         }
     ],
@@ -82,7 +86,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "d6b037f5-615e-4f1a-bfb1-5b5f14d6d45f"
+                        "value": "2fdcf9e2-6ec4-4b5a-8421-5173c518d9f4"
                     }
                 ],
                 "lang": "en"
@@ -100,7 +104,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "d6b037f5-615e-4f1a-bfb1-5b5f14d6d45f"
+                        "value": "2fdcf9e2-6ec4-4b5a-8421-5173c518d9f4"
                     }
                 ]
             }
@@ -134,18 +138,18 @@
                 },
                 "uuid": [
                     {
-                        "value": "38a0eec8-83ca-4c5e-a2d0-b241ebb0bd46"
+                        "value": "262f2035-301e-4a11-857b-db3f60c5387f"
                     }
                 ],
                 "lang": "en",
-                "target_revision_id": "380"
+                "target_revision_id": "393"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/sites\/default\/files\/2017-09\/bowl_strawberries.JPG"
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-09\/marigolds.jpg"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -153,11 +157,11 @@
                 },
                 "uuid": [
                     {
-                        "value": "645599eb-148e-45ee-aefb-7809c72fa14a"
+                        "value": "8fc1c194-220b-499f-b7f6-e93698fe985f"
                     }
                 ],
                 "lang": "en",
-                "alt": "Bowl of ripe, red strawberries.",
+                "alt": "Marigolds in a garden.",
                 "title": "",
                 "width": "1200",
                 "height": "675"
@@ -179,18 +183,34 @@
                     }
                 ],
                 "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/17?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/tags"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "17645072-70d1-44bd-a225-6f7c8591bc81"
+                    }
+                ],
+                "lang": "en"
             }
         ]
     },
     "created": [
         {
-            "value": 1506011470,
+            "value": 1505927261,
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": 1506014504,
+            "value": 1506532216,
             "lang": "en"
         }
     ],
@@ -208,7 +228,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": 1506014504
+            "value": 1506532216
         }
     ],
     "revision_translation_affected": [
@@ -226,7 +246,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sample article | Drutopia Octavia"
+                "title": "Maecenas rutrum facilisis | Drutopia Almost"
             }
         }
     ],
@@ -234,7 +254,7 @@
         {
             "status": 2,
             "cid": 0,
-            "last_comment_timestamp": 1500662285,
+            "last_comment_timestamp": 1506532138,
             "last_comment_name": null,
             "last_comment_uid": 1,
             "comment_count": 0,
@@ -243,7 +263,7 @@
     ],
     "field_summary": [
         {
-            "value": "<p>The summary field is displayed as the shortened (teaser form) of your article. This will show up, for example, on a listing page of articles. It should capture the essence of your article and ideally be two to three sentences.<\/p>\r\n",
+            "value": "<p>In elementum velit et nulla iaculis, vitae tempus nibh sodales. Mauris et ultrices nunc. Aenean eget convallis odio. Proin justo mi, pharetra id dapibus quis, luctus ut magna.<\/p>\r\n",
             "format": "basic_html",
             "lang": "en"
         }

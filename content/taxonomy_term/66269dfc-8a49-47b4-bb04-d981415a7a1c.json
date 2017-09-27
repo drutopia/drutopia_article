@@ -7,11 +7,6 @@
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/article_type"
         }
     },
-    "tid": [
-        {
-            "value": 2
-        }
-    ],
     "uuid": [
         {
             "value": "66269dfc-8a49-47b4-bb04-d981415a7a1c"
@@ -54,7 +49,7 @@
     "metatag": [
         {
             "value": {
-                "title": "News | Drutopia Octavia"
+                "title": "News | Drutopia Almost"
             }
         }
     ]
