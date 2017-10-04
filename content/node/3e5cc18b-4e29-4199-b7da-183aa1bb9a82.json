@@ -115,8 +115,7 @@
                         "value": "25a99c2a-3f5b-4d22-b12f-9be5ebfd410c"
                     }
                 ],
-                "lang": "en",
-                "target_revision_id": "397"
+                "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
