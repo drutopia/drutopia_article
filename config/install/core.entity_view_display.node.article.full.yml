@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_authors
     - field.field.node.article.field_body_paragraph
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
     - node.type.article
@@ -123,4 +124,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_meta_tags: true
   field_summary: true
