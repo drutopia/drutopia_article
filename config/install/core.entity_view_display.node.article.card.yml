@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_authors
     - field.field.node.article.field_body_paragraph
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
     - node.type.article
@@ -117,4 +118,5 @@ hidden:
   field_article_type: true
   field_authors: true
   field_body_paragraph: true
+  field_meta_tags: true
   links: true
