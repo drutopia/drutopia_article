@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_summary
     - field.storage.node.field_article_type
     - field.storage.node.field_authors
-    - field.storage.node.field_body_paragraph
     - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
@@ -115,14 +114,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_authors
-  field_body_paragraph:
-    label: 'Body paragraph'
-    datasource_id: 'entity:node'
-    property_path: field_body_paragraph
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_body_paragraph
 datasource_settings:
   'entity:node':
     bundles:
