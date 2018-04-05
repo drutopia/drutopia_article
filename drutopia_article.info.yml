@@ -23,6 +23,7 @@ dependencies:
   - pathauto
   - rdf
   - responsive_image
+  - search_api
   - taxonomy
   - text
   - user

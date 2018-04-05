@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
@@ -13,11 +14,29 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - ds
     - user
-id: node.article.default
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions: {  }
+id: node.article.search_index
 targetEntityType: node
 bundle: article
-mode: default
+mode: search_index
 content: {  }
 hidden:
   body: true
