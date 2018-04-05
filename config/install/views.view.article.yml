@@ -2,22 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.box
-    - core.entity_view_mode.node.card
-    - core.entity_view_mode.node.teaser
-    - node.type.article
+    - search_api.index.article
     - system.menu.main
   module:
-    - ds
-    - node
+    - search_api
     - user
 id: article
 label: Article
 module: views
-description: 'Various displays for the article content type.'
+description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: search_api_index_article
+base_field: search_api_id
 core: 8.x
 display:
   default:
@@ -36,11 +32,8 @@ display:
       query:
         type: views_query
         options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
+          bypass_access: false
+          skip_access: false
       exposed_form:
         type: basic
         options:
@@ -52,17 +45,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: mini
         options:
-          items_per_page: 16
+          items_per_page: 12
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -71,264 +59,21 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: default
       row:
-        type: 'entity:node'
-        options:
-          view_mode: teaser
+        type: search_api
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exclude: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: Articles
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_promoted:
-    display_plugin: block
-    id: block_promoted
-    display_title: 'Block Promoted'
-    position: 3
-    display_options:
-      display_extenders: {  }
-      title: Latest
-      defaults:
-        title: false
-        filters: false
-        filter_groups: false
-        pager: false
-        link_display: false
-        link_url: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
-        style: false
-        row: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-        promote:
-          id: promote
-          table: node_field_data
-          field: promote
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: promote
-          plugin_id: boolean
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      display_description: ''
-      block_description: 'Promoted articles'
-      link_display: page_1
-      link_url: /taxonomy/term/13
-      use_more: false
-      use_more_always: false
-      use_more_text: More
-      style:
-        type: default
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: card
-      block_hide_empty: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_recent:
-    display_plugin: block
-    id: block_recent
-    display_title: 'Block Recent'
-    position: 2
-    display_options:
-      display_extenders: {  }
-      style:
-        type: default
-      defaults:
-        style: false
-        row: false
-        pager: false
-        fields: false
-        title: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
-        link_display: false
-        link_url: false
-      row:
-        type: fields
-      pager:
-        type: some
-        options:
-          items_per_page: 5
-          offset: 0
-      fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          settings:
-            link_to_entity: true
-          plugin_id: field
+        rendered_item:
+          table: search_api_index_article
+          field: rendered_item
+          id: rendered_item
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api
           relationship: none
           group_type: group
           admin_label: ''
@@ -373,95 +118,110 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
+          link_to_item: false
+          use_highlighting: false
           multi_type: separator
-          separator: ', '
-          field_api_classes: false
-      title: 'Recent articles'
-      use_more: true
-      use_more_always: false
-      use_more_text: 'View more articles.'
-      link_display: page_1
-      link_url: ''
-      display_description: ''
+          multi_separator: ', '
+      filters: {  }
+      sorts:
+        created:
+          id: created
+          table: search_api_index_article
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+      title: Articles
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
-        - 'user.node_grants:view'
+        - url.query_args
         - user.permissions
       tags: {  }
-  page_1:
+  block_promoted:
+    display_plugin: block
+    id: block_promoted
+    display_title: 'Block Promoted'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      title: Latest
+      defaults:
+        title: false
+        style: false
+        row: false
+        pager: false
+        link_display: false
+        link_url: false
+      style:
+        type: default
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              article: card
+      pager:
+        type: full
+        options:
+          items_per_page: 4
+          offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
+      display_description: ''
+      block_description: 'Promoted articles'
+      link_display: page_1
+      link_url: ''
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_listing:
     display_plugin: page
-    id: page_1
+    id: page_listing
     display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
       path: articles
-      style:
-        type: default
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-      defaults:
-        style: false
-        row: false
-      row:
-        type: 'ds_entity:node'
-        options:
-          relationship: none
-          view_mode: box
-          alternating_fieldset:
-            alternating: true
-            allpages: false
-            item_0: teaser
-            item_1: card
-            item_2: card
-            item_3: card
-            item_4: media
-            item_5: media
-            item_6: media
-            item_7: media
-            item_8: box
-            item_9: box
-            item_10: box
-            item_11: box
-            item_12: box
-            item_13: box
-            item_14: box
-            item_15: box
-          grouping_fieldset:
-            group: false
-            group_field: node_field_data|created
-            group_field_function: ''
-          advanced_fieldset:
-            advanced: false
       menu:
         type: normal
         title: Articles
-        description: 'Keep up to date.'
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
         menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
