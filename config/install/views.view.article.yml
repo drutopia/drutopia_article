@@ -10,7 +10,7 @@ dependencies:
 id: article
 label: Article
 module: views
-description: ''
+description: 'Various displays for the article content type.'
 tag: ''
 base_table: search_api_index_article
 base_field: search_api_id
@@ -27,7 +27,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -64,8 +64,16 @@ display:
             next: ››
       style:
         type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
       row:
         type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              article: card
       fields:
         rendered_item:
           table: search_api_index_article
@@ -172,40 +180,16 @@ display:
       title: Latest
       defaults:
         title: false
-        style: false
-        row: false
+        style: true
+        row: true
         pager: false
         link_display: false
         link_url: false
-      style:
-        type: default
-      row:
-        type: search_api
-        options:
-          view_modes:
-            'entity:node':
-              article: card
       pager:
-        type: full
+        type: some
         options:
           items_per_page: 4
           offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          quantity: 9
       display_description: ''
       block_description: 'Promoted articles'
       link_display: page_1
@@ -215,7 +199,6 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
-        - url.query_args
         - user.permissions
       tags: {  }
   page_listing:
@@ -229,6 +212,11 @@ display:
       menu:
         type: normal
         title: Articles
+        description: 'Keep up to date.'
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
         menu_name: main
     cache_metadata:
       max-age: -1
