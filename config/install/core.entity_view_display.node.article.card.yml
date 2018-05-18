@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
+    - field.field.node.article.field_topics
     - node.type.article
     - responsive_image.styles.narrow
   module:
@@ -43,7 +44,7 @@ third_party_settings:
         - node_post_date
         - node_title
         - field_summary
-        - field_tags
+        - field_topics
     fields:
       node_post_date:
         plugin_id: node_post_date
@@ -65,7 +66,7 @@ third_party_settings:
         - node_post_date
         - node_title
         - field_summary
-        - field_tags
+        - field_topics
       parent_name: ''
       weight: 1
       format_type: html_element
@@ -102,7 +103,7 @@ content:
     settings:
       trim_length: 180
     third_party_settings: {  }
-  field_tags:
+  field_topics:
     type: entity_reference_label
     weight: 6
     region: ds_content
@@ -119,4 +120,5 @@ hidden:
   field_authors: true
   field_body_paragraph: true
   field_meta_tags: true
+  field_tags: true
   links: true

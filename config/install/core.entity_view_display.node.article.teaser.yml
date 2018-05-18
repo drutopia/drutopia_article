@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
+    - field.field.node.article.field_topics
     - node.type.article
   module:
     - ds
@@ -43,7 +44,7 @@ third_party_settings:
         - node_title
         - field_authors
         - field_summary
-        - field_tags
+        - field_topics
     fields:
       node_post_date:
         plugin_id: node_post_date
@@ -88,18 +89,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: right
-  field_tags:
+  field_topics:
     type: entity_reference_label
     weight: 5
+    region: right
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
-    label: hidden
-    region: right
 hidden:
   body: true
   comment: true
   field_article_type: true
   field_body_paragraph: true
   field_meta_tags: true
+  field_tags: true
   links: true

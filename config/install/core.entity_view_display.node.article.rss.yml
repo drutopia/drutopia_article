@@ -12,19 +12,20 @@ dependencies:
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
+    - field.field.node.article.field_topics
     - image.style.small_square
     - node.type.article
   module:
     - ds
     - image
+    - taxonomy
     - text
     - user
 third_party_settings:
   ds:
     layout:
       id: ds_1col
-      path: modules/contrib/ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -41,6 +42,7 @@ third_party_settings:
         - field_image
         - node_title
         - field_summary
+        - field_topics
         - links
     fields:
       node_title:
@@ -73,11 +75,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: ds_content
-  links:
+  field_topics:
+    type: entity_reference_rss_category
     weight: 3
+    region: ds_content
+    label: inline
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 4
     region: ds_content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
   comment: true
