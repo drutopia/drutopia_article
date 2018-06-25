@@ -3,6 +3,7 @@ description: 'Provides Article content type and related configuration. Use <em>a
 type: module
 core: 8.x
 dependencies:
+  - block_visibility_groups
   - comment
   - config_actions
   - ctools
@@ -13,6 +14,7 @@ dependencies:
   - drutopia_site
   - ds
   - entity_reference_revisions
+  - facets
   - field
   - field_group
   - image
@@ -24,6 +26,7 @@ dependencies:
   - rdf
   - responsive_image
   - search_api
+  - system
   - taxonomy
   - text
   - user
