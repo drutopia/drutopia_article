@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.file
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: node.article.field_body_paragraph
@@ -28,24 +29,28 @@ settings:
       text: text
       image: image
       file: file
+      video: video
       faq: faq
     target_bundles_drag_drop:
       text:
         enabled: true
-        weight: -11
+        weight: -15
       image:
         enabled: true
-        weight: -10
+        weight: -14
       file:
         enabled: true
-        weight: -9
-      slide:
-        weight: -8
-        enabled: false
-      update:
-        weight: -7
-        enabled: false
+        weight: -13
+      video:
+        enabled: true
+        weight: -12
       faq:
         enabled: true
-        weight: 9
+        weight: -11
+      slide:
+        weight: -10
+        enabled: false
+      update:
+        weight: -9
+        enabled: false
 field_type: entity_reference_revisions
