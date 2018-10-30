@@ -1,10 +1,20 @@
-An article content type, listing page and recent news block on the homepage.
+<!-- writeme -->
+Drutopia Article
+================
 
-## Planned Features
-* Relate an article to an action, campaign or group.
-* Post an article to Facebook or Twitter to your account when publishing/updating.
+Drutopia Article is a base feature providing an article content type and related configuration.
 
-## Potential Future Features
-* Collaborative, moderated editing of an article (think wiki meets blog)
-* SMS integration
-* 
+ * https://gitlab.com/drutopia/drutopia_article
+ * Package name: drupal/drutopia_article
+
+
+### Requirements
+
+ * drupal/token ^1.4
+
+
+### License
+
+GPL-2.0+
+
+<!-- endwriteme -->
