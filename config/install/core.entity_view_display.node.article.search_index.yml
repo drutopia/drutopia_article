@@ -16,6 +16,8 @@ dependencies:
     - node.type.article
   module:
     - ds
+    - entity_reference_revisions
+    - responsive_image
     - user
 third_party_settings:
   ds:
@@ -33,21 +35,71 @@ third_party_settings:
         link_custom: ''
         classes:
           layout_class: {  }
-    regions: {  }
+    regions:
+      ds_content:
+        - field_image
+        - field_authors
+        - node_post_date
+        - field_body_paragraph
+        - field_topics
+        - field_tags
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 2
+        label: hidden
+        formatter: ds_post_date_month_day_year
 id: node.article.search_index
 targetEntityType: node
 bundle: article
 mode: search_index
-content: {  }
+content:
+  field_authors:
+    type: entity_reference_label
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_body_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_image:
+    type: responsive_image
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      responsive_image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 5
+    region: ds_content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_topics:
+    type: entity_reference_label
+    weight: 4
+    region: ds_content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
 hidden:
   body: true
   comment: true
   field_article_type: true
-  field_authors: true
-  field_body_paragraph: true
-  field_image: true
   field_meta_tags: true
   field_summary: true
-  field_tags: true
-  field_topics: true
   links: true
