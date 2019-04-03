@@ -27,7 +27,7 @@ third_party_settings:
     layout:
       id: ds_3col_stacked
       library: ds/ds_3col_stacked
-      disable_css: false
+      disable_css: true
       entity_classes: all_classes
       settings:
         wrappers:
