@@ -18,6 +18,7 @@ dependencies:
   - facets
   - field
   - field_group
+  - focal_point
   - image
   - metatag
   - node

@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_topics
     - node.type.article
+    - responsive_image.styles.narrow
   module:
     - ds
     - responsive_image
@@ -77,8 +78,8 @@ content:
     type: responsive_image
     weight: 0
     settings:
+      responsive_image_style: narrow
       image_link: content
-      responsive_image_style: ''
     third_party_settings: {  }
     label: visually_hidden
     region: left
