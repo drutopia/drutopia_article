@@ -211,10 +211,10 @@ display:
       path: articles
       menu:
         type: normal
-        title: Articles
+        title: News
         description: 'Keep up to date.'
         expanded: false
-        parent: ''
+        parent: 'menu_link_content:3f594be0-bb0f-4b30-923e-e7984983a0fd'
         weight: 0
         context: '0'
         menu_name: main
